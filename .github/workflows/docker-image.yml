@@ -22,5 +22,4 @@ jobs:
        echo $PASS
        docker build . --file Dockerfile --tag vikaswani/dcm_web_server
        docker login -u $USER -p $PASS
-       
        docker push vikaswani/dcm_web_server
