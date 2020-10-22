@@ -16,11 +16,12 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build the Docker image
       env:
-        USER: ${{ secrets.USER }}
-        PASS: ${{ secrets.PASS }}    
+        USER: ${{ secrets.USERNAME }}
+        PASS: ${{ secrets.PASS }}
       run: |
-       echo $USER
-       echo $PASS
-       docker build . --file Dockerfile --tag vikaswani/dcm_web_server
-       docker login -u $USER -p $PASS
-       docker push vikaswani/dcm_web_server
+        echo $USER
+        echo $PASS
+        docker build . --file Dockerfile --tag vikaswani/dcm_webserver
+        docker login -u $USER -p $PASS
+        
+        docker push vikaswani/dcm_webserver:latest
