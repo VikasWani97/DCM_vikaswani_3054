@@ -1,4 +1,5 @@
-MAINTENER vikas 
+FROM ubuntu
+MAINTAINER vikas 
 RUN apt-get update
 RUN apt-get install -y nginx
  
